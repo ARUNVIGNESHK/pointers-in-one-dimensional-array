@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+    int a,i,*p;
+    static int x[5]={1,2,3,4,5};
+    i=0;
+    p=x;
+    a=0;
+    printf("Element  value  Address\n\n");
+    while(i<5){
+        printf("x[%d]  %d  %u\n", i ,*p ,p);
+        a=a + *p;
+        i++;
+        p++;
+    }
+    printf("\n a     = %d\n" ,  a);
+    printf("\n &x[0] = %u\n" , &x[0]);
+    printf("\n p     = %u\n" , p);
+
+    return 0;
+}
